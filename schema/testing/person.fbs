@@ -1,0 +1,15 @@
+namespace com.example.tutorial.flatbuffers;
+
+table PersonFlat {
+    name:string;
+    id:int32;
+    email:string;
+    phones:[PhoneNumberFlat];
+}
+
+enum PhoneTypeFlat : byte {Mobile, Home, Work}
+
+table PhoneNumberFlat {
+    number:string;
+    type:PhoneTypeFlat = Home;
+}
