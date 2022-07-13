@@ -1,4 +1,4 @@
-package comparison;
+package comparison.measurements;
 
 import org.apache.thrift.TDeserializer;
 import org.apache.thrift.TException;
@@ -19,7 +19,7 @@ public class ThriftMeasurement extends Measurement {
 
 
     protected ThriftMeasurement() {
-        super("Thrift", "data_thrift.ser");
+        super("Thrift", "thrift", "ser");
         try {
             this.serializer = new TSerializer(new TBinaryProtocol.Factory());
             this.deserializer = new TDeserializer(new TBinaryProtocol.Factory());
@@ -29,7 +29,7 @@ public class ThriftMeasurement extends Measurement {
     }
 
     @Override
-    public Object buildObject() {
+    public Object buildObject1() {
         return new PersonThrift()
                 .setId(super.getID())
                 .setName(super.getNAME())
@@ -42,7 +42,7 @@ public class ThriftMeasurement extends Measurement {
     }
 
     @Override
-    public byte[] serializeObject(Object object) throws IOException {
+    public byte[] serializeObject1(Object object) throws IOException {
         try {
             return this.serializer.serialize((PersonThrift) object);
         } catch (TException e) {
@@ -52,7 +52,7 @@ public class ThriftMeasurement extends Measurement {
     }
 
     @Override
-    public Object deserializeObject(byte[] bytes) throws IOException {
+    public Object deserializeObject1(byte[] bytes) throws IOException {
         PersonThrift person = new PersonThrift();
         try {
             deserializer.deserialize(person, bytes);
@@ -60,5 +60,65 @@ public class ThriftMeasurement extends Measurement {
             e.printStackTrace();
         }
         return person;
+    }
+
+    @Override
+    public Object buildObject2() {
+        return null;
+    }
+
+    @Override
+    public byte[] serializeObject2(Object object) throws IOException {
+        return new byte[0];
+    }
+
+    @Override
+    public Object deserializeObject2(byte[] bytes) throws IOException {
+        return null;
+    }
+
+    @Override
+    public Object buildObject3() {
+        return null;
+    }
+
+    @Override
+    public byte[] serializeObject3(Object object) throws IOException {
+        return new byte[0];
+    }
+
+    @Override
+    public Object deserializeObject3(byte[] bytes) throws IOException {
+        return null;
+    }
+
+    @Override
+    public Object buildObject4() {
+        return null;
+    }
+
+    @Override
+    public byte[] serializeObject4(Object object) throws IOException {
+        return new byte[0];
+    }
+
+    @Override
+    public Object deserializeObject4(byte[] bytes) throws IOException {
+        return null;
+    }
+
+    @Override
+    public Object buildObject5() {
+        return null;
+    }
+
+    @Override
+    public byte[] serializeObject5(Object object) throws IOException {
+        return new byte[0];
+    }
+
+    @Override
+    public Object deserializeObject5(byte[] bytes) throws IOException {
+        return null;
     }
 }

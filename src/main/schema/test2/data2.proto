@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package generated;
+
+option java_multiple_files = false;
+option java_package = "generated.data2.proto";
+option java_outer_classname = "DataProtos2";
+
+message Data {
+  double number1 = 1;
+  double number2 = 2;
+  string string1 = 3;
+  string string2 = 4;
+  string string3 = 5;
+  string string4 = 6;
+  string string5 = 7;
+  string string6 = 8;
+  string string7 = 9;
+  string string8 = 10;
+}
