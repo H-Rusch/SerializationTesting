@@ -3,8 +3,8 @@ syntax = "proto3";
 package generated;
 
 option java_multiple_files = false;
-option java_package = "generated.data5.proto";
-option java_outer_classname = "DataProtos5";
+option java_package = "generated.data6.protobuf";
+option java_outer_classname = "DataProtos6";
 
 message Data {
   string string1 = 1;

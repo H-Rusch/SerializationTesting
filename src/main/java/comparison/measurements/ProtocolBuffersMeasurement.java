@@ -1,10 +1,11 @@
 package comparison.measurements;
 
 import comparison.DataHelper;
-import generated.data1.proto.DataProtos1;
-import generated.data2.proto.DataProtos2;
-import generated.data3.proto.DataProtos3;
-import generated.data5.proto.DataProtos5;
+import generated.data1.protobuf.DataProtos1;
+import generated.data2.protobuf.DataProtos2;
+import generated.data3.protobuf.DataProtos3;
+import generated.data4_5.protobuf.DataProtos4;
+import generated.data6.protobuf.DataProtos6;
 
 import java.io.IOException;
 import java.util.Map;
@@ -43,6 +44,7 @@ public class ProtocolBuffersMeasurement extends Measurement {
         return DataProtos1.Data.parseFrom(bytes);
     }
 
+
     // Test 2
     @Override
     public Object buildObject2() {
@@ -71,31 +73,32 @@ public class ProtocolBuffersMeasurement extends Measurement {
         return DataProtos2.Data.parseFrom(bytes);
     }
 
+
     // Test 3
     @Override
     public Object buildObject3() {
         Map<String, Object> dataItems = DataHelper.getItemMap3();
         return DataProtos3.Data.newBuilder()
-                .setString1((String) dataItems.get("string1"))
-                .setString2((String) dataItems.get("string2"))
-                .setString3((String) dataItems.get("string3"))
-                .setString4((String) dataItems.get("string4"))
-                .setString5((String) dataItems.get("string5"))
-                .setString6((String) dataItems.get("string6"))
-                .setString7((String) dataItems.get("string7"))
-                .setString8((String) dataItems.get("string8"))
-                .setString9((String) dataItems.get("string9"))
-                .setString10((String) dataItems.get("string10"))
-                .setString11((String) dataItems.get("string11"))
-                .setString12((String) dataItems.get("string12"))
-                .setString13((String) dataItems.get("string13"))
-                .setString14((String) dataItems.get("string14"))
-                .setString15((String) dataItems.get("string15"))
-                .setString16((String) dataItems.get("string16"))
-                .setString17((String) dataItems.get("string17"))
-                .setString18((String) dataItems.get("string18"))
-                .setString19((String) dataItems.get("string19"))
-                .setString20((String) dataItems.get("string20"))
+                .setNumber1((Integer) dataItems.get("number1"))
+                .setNumber2((Integer) dataItems.get("number2"))
+                .setNumber3((Integer) dataItems.get("number3"))
+                .setNumber4((Integer) dataItems.get("number4"))
+                .setNumber5((Integer) dataItems.get("number5"))
+                .setNumber6((Integer) dataItems.get("number6"))
+                .setNumber7((Integer) dataItems.get("number7"))
+                .setNumber8((Integer) dataItems.get("number8"))
+                .setNumber9((Integer) dataItems.get("number9"))
+                .setNumber10((Integer) dataItems.get("number10"))
+                .setNumber11((Double) dataItems.get("number11"))
+                .setNumber12((Double) dataItems.get("number12"))
+                .setNumber13((Double) dataItems.get("number13"))
+                .setNumber14((Double) dataItems.get("number14"))
+                .setNumber15((Double) dataItems.get("number15"))
+                .setNumber16((Double) dataItems.get("number16"))
+                .setNumber17((Double) dataItems.get("number17"))
+                .setNumber18((Double) dataItems.get("number18"))
+                .setNumber19((Double) dataItems.get("number19"))
+                .setNumber20((Double) dataItems.get("number20"))
                 .build();
     }
 
@@ -109,11 +112,12 @@ public class ProtocolBuffersMeasurement extends Measurement {
         return DataProtos3.Data.parseFrom(bytes);
     }
 
+
     // Test 4
     @Override
     public Object buildObject4() {
         Map<String, Object> dataItems = DataHelper.getItemMap4();
-        return DataProtos3.Data.newBuilder()
+        return DataProtos4.Data.newBuilder()
                 .setString1((String) dataItems.get("string1"))
                 .setString2((String) dataItems.get("string2"))
                 .setString3((String) dataItems.get("string3"))
@@ -139,19 +143,58 @@ public class ProtocolBuffersMeasurement extends Measurement {
 
     @Override
     public byte[] serializeObject4(Object object) throws IOException {
-        return ((DataProtos3.Data) object).toByteArray();
+        return ((DataProtos4.Data) object).toByteArray();
     }
 
     @Override
     public Object deserializeObject4(byte[] bytes) throws IOException {
-        return DataProtos3.Data.parseFrom(bytes);
+        return DataProtos4.Data.parseFrom(bytes);
     }
+
 
     // Test 5
     @Override
     public Object buildObject5() {
         Map<String, Object> dataItems = DataHelper.getItemMap5();
-        return DataProtos5.Data.newBuilder()
+        return DataProtos4.Data.newBuilder()
+                .setString1((String) dataItems.get("string1"))
+                .setString2((String) dataItems.get("string2"))
+                .setString3((String) dataItems.get("string3"))
+                .setString4((String) dataItems.get("string4"))
+                .setString5((String) dataItems.get("string5"))
+                .setString6((String) dataItems.get("string6"))
+                .setString7((String) dataItems.get("string7"))
+                .setString8((String) dataItems.get("string8"))
+                .setString9((String) dataItems.get("string9"))
+                .setString10((String) dataItems.get("string10"))
+                .setString11((String) dataItems.get("string11"))
+                .setString12((String) dataItems.get("string12"))
+                .setString13((String) dataItems.get("string13"))
+                .setString14((String) dataItems.get("string14"))
+                .setString15((String) dataItems.get("string15"))
+                .setString16((String) dataItems.get("string16"))
+                .setString17((String) dataItems.get("string17"))
+                .setString18((String) dataItems.get("string18"))
+                .setString19((String) dataItems.get("string19"))
+                .setString20((String) dataItems.get("string20"))
+                .build();
+    }
+
+    @Override
+    public byte[] serializeObject5(Object object) throws IOException {
+        return ((DataProtos4.Data) object).toByteArray();
+    }
+
+    @Override
+    public Object deserializeObject5(byte[] bytes) throws IOException {
+        return DataProtos4.Data.parseFrom(bytes);
+    }
+
+    // Test 6
+    @Override
+    public Object buildObject6() {
+        Map<String, Object> dataItems = DataHelper.getItemMap6();
+        return DataProtos6.Data.newBuilder()
                 .setString1((String) dataItems.get("string1"))
                 .setString2((String) dataItems.get("string2"))
                 .setString3((String) dataItems.get("string3"))
@@ -356,12 +399,12 @@ public class ProtocolBuffersMeasurement extends Measurement {
     }
 
     @Override
-    public byte[] serializeObject5(Object object) throws IOException {
-        return ((DataProtos5.Data) object).toByteArray();
+    public byte[] serializeObject6(Object object) throws IOException {
+        return ((DataProtos6.Data) object).toByteArray();
     }
 
     @Override
-    public Object deserializeObject5(byte[] bytes) throws IOException {
-        return DataProtos5.Data.parseFrom(bytes);
+    public Object deserializeObject6(byte[] bytes) throws IOException {
+        return DataProtos6.Data.parseFrom(bytes);
     }
 }

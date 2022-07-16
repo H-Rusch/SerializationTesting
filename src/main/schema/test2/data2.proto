@@ -3,7 +3,7 @@ syntax = "proto3";
 package generated;
 
 option java_multiple_files = false;
-option java_package = "generated.data2.proto";
+option java_package = "generated.data2.protobuf";
 option java_outer_classname = "DataProtos2";
 
 message Data {

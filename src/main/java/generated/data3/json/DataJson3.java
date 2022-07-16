@@ -1,124 +1,124 @@
 package generated.data3.json;
 
 public class DataJson3 {
-    public String string1;
-    public String string2;
-    public String string3;
-    public String string4;
-    public String string5;
-    public String string6;
-    public String string7;
-    public String string8;
-    public String string9;
-    public String string10;
-    public String string11;
-    public String string12;
-    public String string13;
-    public String string14;
-    public String string15;
-    public String string16;
-    public String string17;
-    public String string18;
-    public String string19;
-    public String string20;
+    public int number1;
+    public int number2;
+    public int number3;
+    public int number4;
+    public int number5;
+    public int number6;
+    public int number7;
+    public int number8;
+    public int number9;
+    public int number10;
+    public double number11;
+    public double number12;
+    public double number13;
+    public double number14;
+    public double number15;
+    public double number16;
+    public double number17;
+    public double number18;
+    public double number19;
+    public double number20;
 
-    public DataJson3 setString1(String string1) {
-        this.string1 = string1;
+    public DataJson3 setNumber1(int number1) {
+        this.number1 = number1;
         return this;
     }
 
-    public DataJson3 setString2(String string2) {
-        this.string2 = string2;
+    public DataJson3 setNumber2(int number2) {
+        this.number2 = number2;
         return this;
     }
 
-    public DataJson3 setString3(String string3) {
-        this.string3 = string3;
+    public DataJson3 setNumber3(int number3) {
+        this.number3 = number3;
         return this;
     }
 
-    public DataJson3 setString4(String string4) {
-        this.string4 = string4;
+    public DataJson3 setNumber4(int number4) {
+        this.number4 = number4;
         return this;
     }
 
-    public DataJson3 setString5(String string5) {
-        this.string5 = string5;
+    public DataJson3 setNumber5(int number5) {
+        this.number5 = number5;
         return this;
     }
 
-    public DataJson3 setString6(String string6) {
-        this.string6 = string6;
+    public DataJson3 setNumber6(int number6) {
+        this.number6 = number6;
         return this;
     }
 
-    public DataJson3 setString7(String string7) {
-        this.string7 = string7;
+    public DataJson3 setNumber7(int number7) {
+        this.number7 = number7;
         return this;
     }
 
-    public DataJson3 setString8(String string8) {
-        this.string8 = string8;
+    public DataJson3 setNumber8(int number8) {
+        this.number8 = number8;
         return this;
     }
 
-    public DataJson3 setString9(String string9) {
-        this.string9 = string9;
+    public DataJson3 setNumber9(int number9) {
+        this.number9 = number9;
         return this;
     }
 
-    public DataJson3 setString10(String string10) {
-        this.string10 = string10;
+    public DataJson3 setNumber10(int number10) {
+        this.number10 = number10;
         return this;
     }
 
-    public DataJson3 setString11(String string11) {
-        this.string11 = string11;
+    public DataJson3 setNumber11(double number11) {
+        this.number11 = number11;
         return this;
     }
 
-    public DataJson3 setString12(String string12) {
-        this.string12 = string12;
+    public DataJson3 setNumber12(double number12) {
+        this.number12 = number12;
         return this;
     }
 
-    public DataJson3 setString13(String string13) {
-        this.string13 = string13;
+    public DataJson3 setNumber13(double number13) {
+        this.number13 = number13;
         return this;
     }
 
-    public DataJson3 setString14(String string14) {
-        this.string14 = string14;
+    public DataJson3 setNumber14(double number14) {
+        this.number14 = number14;
         return this;
     }
 
-    public DataJson3 setString15(String string15) {
-        this.string15 = string15;
+    public DataJson3 setNumber15(double number15) {
+        this.number15 = number15;
         return this;
     }
 
-    public DataJson3 setString16(String string16) {
-        this.string16 = string16;
+    public DataJson3 setNumber16(double number16) {
+        this.number16 = number16;
         return this;
     }
 
-    public DataJson3 setString17(String string17) {
-        this.string17 = string17;
+    public DataJson3 setNumber17(double number17) {
+        this.number17 = number17;
         return this;
     }
 
-    public DataJson3 setString18(String string18) {
-        this.string18 = string18;
+    public DataJson3 setNumber18(double number18) {
+        this.number18 = number18;
         return this;
     }
 
-    public DataJson3 setString19(String string19) {
-        this.string19 = string19;
+    public DataJson3 setNumber19(double number19) {
+        this.number19 = number19;
         return this;
     }
 
-    public DataJson3 setString20(String string20) {
-        this.string20 = string20;
+    public DataJson3 setNumber20(double number20) {
+        this.number20 = number20;
         return this;
     }
 }

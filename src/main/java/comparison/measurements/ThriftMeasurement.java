@@ -121,4 +121,19 @@ public class ThriftMeasurement extends Measurement {
     public Object deserializeObject5(byte[] bytes) throws IOException {
         return null;
     }
+
+    @Override
+    public Object buildObject6() {
+        return null;
+    }
+
+    @Override
+    public byte[] serializeObject6(Object object) throws IOException {
+        return new byte[0];
+    }
+
+    @Override
+    public Object deserializeObject6(byte[] bytes) throws IOException {
+        return null;
+    }
 }
