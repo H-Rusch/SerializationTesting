@@ -9,7 +9,6 @@ import generated.data6.capnp.DataCapnp6;
 import org.capnproto.MessageBuilder;
 import org.capnproto.MessageReader;
 import org.capnproto.Serialize;
-import testing.capnp.PersonCapnp;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -56,7 +55,7 @@ public class CapnProtoMeasurement extends Measurement {
     public Object deserializeObject1(byte[] bytes) throws IOException {
         MessageReader messageReader = Serialize.read(ByteBuffer.wrap(bytes));
 
-        return messageReader.getRoot(PersonCapnp.Person.factory);
+        return messageReader.getRoot(DataCapnp1.Data.factory);
     }
 
 

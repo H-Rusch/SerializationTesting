@@ -1,0 +1,14 @@
+namespace generated.data1.flatbuffers;
+
+table Data1Flat {
+    string1:string;
+    string2:string;
+    number1:int32;
+    number2:int32;
+    number3:int32;
+    number4:int32;
+    number5:double;
+    number6:double;
+    number7:double;
+    number8:double;
+}

@@ -1,0 +1,24 @@
+namespace generated.data3.flatbuffers;
+
+table Data3Flat {
+    number1:int32;
+    number2:int32;
+    number3:int32;
+    number4:int32;
+    number5:int32;
+    number6:int32;
+    number7:int32;
+    number8:int32;
+    number9:int32;
+    number10:int32;
+    number11:double;
+    number12:double;
+    number13:double;
+    number14:double;
+    number15:double;
+    number16:double;
+    number17:double;
+    number18:double;
+    number19:double;
+    number20:double;
+}

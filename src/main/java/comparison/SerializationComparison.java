@@ -15,7 +15,7 @@ public class SerializationComparison {
                 new JsonMeasurement().measure(i);
 
                 // BSON
-                //new BsonMeasurement().measure(i);
+                new BsonMeasurement().measure(i);
 
                 // Protocol Buffers
                 new ProtocolBuffersMeasurement().measure(i);
@@ -27,7 +27,7 @@ public class SerializationComparison {
                 new ThriftMeasurement().measure(i);
 
                 // FlatBuffers
-                //new FlatBuffersMeasurement().measure();
+                new FlatBuffersMeasurement().measure(i);
 
                 // Cap'n Proto
                 new CapnProtoMeasurement().measure(i);
