@@ -11,6 +11,7 @@ public class SerializationComparison {
         DataHelper.initAll();
 
         try {
+            for (int i = 1; i <= 6; i++) {
             /*
             // JSON
             new JsonMeasurement().measure();
@@ -33,8 +34,9 @@ public class SerializationComparison {
             // FlatBuffers
             new FlatBuffersMeasurement().measure();
 */
-            // Cap'n Proto
-            new CapnProtoMeasurement().measure();
+                // Cap'n Proto
+                new CapnProtoMeasurement().measure(i);
+            }
 
         } catch (Exception e) {
             e.printStackTrace();

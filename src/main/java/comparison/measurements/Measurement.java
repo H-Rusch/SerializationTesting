@@ -41,27 +41,27 @@ public abstract class Measurement {
         return NUMBER;
     }
 
-    public final void measure() throws IOException {
+    public final void measure(int number) throws IOException {
         long startTime, endTime, measurementSerialize, measurementDeserialize;
         byte[] bytes;
         Object object;
-        int number = 1;
 
-        // --- TEST 1 -----------------------------------
-        // serialization
-        object = buildObject1();
+        // build object
+        object = buildObject(number);
+
+        //serialization
         startTime = System.nanoTime();
         for (int i = 0; i < limit; i++) {
-            serializeObject1(object);
+            serializeObject(number, object);
         }
         endTime = System.nanoTime();
         measurementSerialize = (endTime - startTime) / limit;
 
         // deserialization
-        bytes = serializeObject1(object);
+        bytes = serializeObject(number, object);
         startTime = System.nanoTime();
         for (int i = 0; i < limit; i++) {
-            deserializeObject1(bytes);
+            deserializeObject(number, bytes);
         }
         endTime = System.nanoTime();
         measurementDeserialize = (endTime - startTime) / limit;
@@ -71,140 +71,54 @@ public abstract class Measurement {
 
         // print info
         printInfo(number, measurementSerialize, measurementDeserialize);
+    }
 
-        // --- TEST 2 -----------------------------------
-        number++;
-        // serialization
-        object = buildObject2();
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            serializeObject2(object);
+    public final Object buildObject(int number) {
+        Object obj;
+
+        switch (number) {
+            case 1 -> obj = buildObject1();
+            case 2 -> obj = buildObject2();
+            case 3 -> obj = buildObject3();
+            case 4 -> obj = buildObject4();
+            case 5 -> obj = buildObject5();
+            case 6 -> obj = buildObject6();
+            default -> obj = null;
         }
-        endTime = System.nanoTime();
-        measurementSerialize = (endTime - startTime) / limit;
 
-        // deserialization
-        bytes = serializeObject2(object);
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            deserializeObject2(bytes);
+        return obj;
+    }
+
+    public final byte[] serializeObject(int number, Object object) throws IOException {
+        byte[] bytes;
+
+        switch (number) {
+            case 1 -> bytes = serializeObject1(object);
+            case 2 -> bytes = serializeObject2(object);
+            case 3 -> bytes = serializeObject3(object);
+            case 4 -> bytes = serializeObject4(object);
+            case 5 -> bytes = serializeObject5(object);
+            case 6 -> bytes = serializeObject6(object);
+            default -> bytes = null;
         }
-        endTime = System.nanoTime();
-        measurementDeserialize = (endTime - startTime) / limit;
 
-        // save to file
-        saveToFile(bytes, number);
+        return bytes;
+    }
 
-        // print info
-        printInfo(number, measurementSerialize, measurementDeserialize);
+    public final Object deserializeObject(int number, byte[] bytes) throws IOException {
+        Object obj;
 
-
-        // --- TEST 3 -----------------------------------
-        number++;
-        // serialization
-        object = buildObject3();
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            serializeObject3(object);
+        switch (number) {
+            case 1 -> obj = deserializeObject1(bytes);
+            case 2 -> obj = deserializeObject2(bytes);
+            case 3 -> obj = deserializeObject3(bytes);
+            case 4 -> obj = deserializeObject4(bytes);
+            case 5 -> obj = deserializeObject5(bytes);
+            case 6 -> obj = deserializeObject6(bytes);
+            default -> obj = null;
         }
-        endTime = System.nanoTime();
-        measurementSerialize = (endTime - startTime) / limit;
 
-        // deserialization
-        bytes = serializeObject3(object);
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            deserializeObject3(bytes);
-        }
-        endTime = System.nanoTime();
-        measurementDeserialize = (endTime - startTime) / limit;
-
-        // save to file
-        saveToFile(bytes, number);
-
-        // print info
-        printInfo(number, measurementSerialize, measurementDeserialize);
-
-
-        // --- TEST 4 -----------------------------------
-        number++;
-        // serialization
-        object = buildObject4();
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            serializeObject4(object);
-        }
-        endTime = System.nanoTime();
-        measurementSerialize = (endTime - startTime) / limit;
-
-        // deserialization
-        bytes = serializeObject4(object);
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            deserializeObject4(bytes);
-        }
-        endTime = System.nanoTime();
-        measurementDeserialize = (endTime - startTime) / limit;
-
-        // save to file
-        saveToFile(bytes, number);
-
-        // print info
-        printInfo(number, measurementSerialize, measurementDeserialize);
-
-
-        // --- TEST 5 -----------------------------------
-        number++;
-        // serialization
-        object = buildObject5();
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            serializeObject5(object);
-        }
-        endTime = System.nanoTime();
-        measurementSerialize = (endTime - startTime) / limit;
-
-        // deserialization
-        bytes = serializeObject5(object);
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            deserializeObject5(bytes);
-        }
-        endTime = System.nanoTime();
-        measurementDeserialize = (endTime - startTime) / limit;
-
-        // save to file
-        saveToFile(bytes, number);
-
-        // print info
-        printInfo(number, measurementSerialize, measurementDeserialize);
-
-
-        // --- TEST 6 -----------------------------------
-        number++;
-        // serialization
-        object = buildObject6();
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            serializeObject6(object);
-        }
-        endTime = System.nanoTime();
-        measurementSerialize = (endTime - startTime) / limit;
-
-        // deserialization
-        bytes = serializeObject6(object);
-        startTime = System.nanoTime();
-        for (int i = 0; i < limit; i++) {
-            deserializeObject6(bytes);
-        }
-        endTime = System.nanoTime();
-        measurementDeserialize = (endTime - startTime) / limit;
-
-        // save to file
-        saveToFile(bytes, number);
-
-        // print info
-        printInfo(number, measurementSerialize, measurementDeserialize);
+        return obj;
     }
 
     private void printInfo(int number, long measurementSerialize, long measurementDeserialize) {
