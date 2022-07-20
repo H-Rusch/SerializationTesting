@@ -9,14 +9,10 @@ import generated.data6.avro.Data6Avro;
 import org.apache.avro.io.*;
 import org.apache.avro.specific.SpecificDatumReader;
 import org.apache.avro.specific.SpecificDatumWriter;
-import testing.avro.PersonAvro;
-import testing.avro.PhoneNumberAvro;
-import testing.avro.PhoneTypeAvro;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 public class AvroMeasurement extends Measurement {
@@ -39,7 +35,7 @@ public class AvroMeasurement extends Measurement {
 
 
     public AvroMeasurement() {
-        super("Avro", "avro", "ser");
+        super("Avro", "avro", "dat");
         this.datumWriterData1 = new SpecificDatumWriter<>(Data1Avro.class);
         this.datumReaderData1 = new SpecificDatumReader<>(Data1Avro.class);
         this.datumWriterData2 = new SpecificDatumWriter<>(Data2Avro.class);

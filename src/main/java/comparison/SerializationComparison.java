@@ -18,13 +18,13 @@ public class SerializationComparison {
                 //new BsonMeasurement().measure(i);
 
                 // Protocol Buffers
-                //new ProtocolBuffersMeasurement().measure(i);
+                new ProtocolBuffersMeasurement().measure(i);
 
                 // Avro
                 new AvroMeasurement().measure(i);
 
                 // Thrift
-                //new ThriftMeasurement().measure();
+                new ThriftMeasurement().measure(i);
 
                 // FlatBuffers
                 //new FlatBuffersMeasurement().measure();
