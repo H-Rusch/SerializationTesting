@@ -1,0 +1,17 @@
+{
+    "namespace": "generated.data2.avro",
+    "type": "record",
+    "name": "Data2Avro",
+    "fields" : [
+        {"name": "number1", "type": "double"},
+        {"name": "number2", "type": "double"},
+        {"name": "string1", "type": "string"},
+        {"name": "string2", "type": "string"},
+        {"name": "string3", "type": "string"},
+        {"name": "string4", "type": "string"},
+        {"name": "string5", "type": "string"},
+        {"name": "string6", "type": "string"},
+        {"name": "string7", "type": "string"},
+        {"name": "string8", "type": "string"}
+    ]
+}

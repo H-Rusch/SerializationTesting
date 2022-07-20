@@ -27,7 +27,7 @@
                             <goal>schema</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${project.basedir}/schema/</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/src/main/schema/avro/</sourceDirectory>
                             <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
                         </configuration>
                     </execution>

@@ -1,9 +1,6 @@
 package comparison;
 
-import comparison.measurements.BsonMeasurement;
-import comparison.measurements.CapnProtoMeasurement;
-import comparison.measurements.JsonMeasurement;
-import comparison.measurements.ProtocolBuffersMeasurement;
+import comparison.measurements.*;
 
 public class SerializationComparison {
 
@@ -12,28 +9,26 @@ public class SerializationComparison {
 
         try {
             for (int i = 1; i <= 6; i++) {
-            /*
-            // JSON
-            new JsonMeasurement().measure();
+                System.out.println("\n" + "--- TEST " + i + " " + "-".repeat(30));
 
-            // BSON
-            new BsonMeasurement().measure();
+                // JSON
+                new JsonMeasurement().measure(i);
 
-            // Protocol Buffers
-            new ProtocolBuffersMeasurement().measure();
+                // BSON
+                //new BsonMeasurement().measure(i);
 
-             */
-    /*
-            // Avro
-            new AvroMeasurement().measure();
+                // Protocol Buffers
+                //new ProtocolBuffersMeasurement().measure(i);
 
+                // Avro
+                new AvroMeasurement().measure(i);
 
-            // Thrift
-            new ThriftMeasurement().measure();
+                // Thrift
+                //new ThriftMeasurement().measure();
 
-            // FlatBuffers
-            new FlatBuffersMeasurement().measure();
-*/
+                // FlatBuffers
+                //new FlatBuffersMeasurement().measure();
+
                 // Cap'n Proto
                 new CapnProtoMeasurement().measure(i);
             }

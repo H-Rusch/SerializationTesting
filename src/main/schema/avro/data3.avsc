@@ -1,0 +1,27 @@
+{
+    "namespace": "generated.data3.avro",
+    "type": "record",
+    "name": "Data3Avro",
+    "fields" : [
+        {"name": "number1", "type": "int"},
+        {"name": "number2", "type": "int"},
+        {"name": "number3", "type": "int"},
+        {"name": "number4", "type": "int"},
+        {"name": "number5", "type": "int"},
+        {"name": "number6", "type": "int"},
+        {"name": "number7", "type": "int"},
+        {"name": "number8", "type": "int"},
+        {"name": "number9", "type": "int"},
+        {"name": "number10", "type": "int"},
+        {"name": "number11", "type": "double"},
+        {"name": "number12", "type": "double"},
+        {"name": "number13", "type": "double"},
+        {"name": "number14", "type": "double"},
+        {"name": "number15", "type": "double"},
+        {"name": "number16", "type": "double"},
+        {"name": "number17", "type": "double"},
+        {"name": "number18", "type": "double"},
+        {"name": "number19", "type": "double"},
+        {"name": "number20", "type": "double"}
+    ]
+}

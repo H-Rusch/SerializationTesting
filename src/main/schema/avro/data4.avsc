@@ -1,0 +1,27 @@
+{
+    "namespace": "generated.data4_5.avro",
+    "type": "record",
+    "name": "Data4Avro",
+    "fields" : [
+        {"name": "string1", "type": "string"},
+        {"name": "string2", "type": "string"},
+        {"name": "string3", "type": "string"},
+        {"name": "string4", "type": "string"},
+        {"name": "string5", "type": "string"},
+        {"name": "string6", "type": "string"},
+        {"name": "string7", "type": "string"},
+        {"name": "string8", "type": "string"},
+        {"name": "string9", "type": "string"},
+        {"name": "string10", "type": "string"},
+        {"name": "string11", "type": "string"},
+        {"name": "string12", "type": "string"},
+        {"name": "string13", "type": "string"},
+        {"name": "string14", "type": "string"},
+        {"name": "string15", "type": "string"},
+        {"name": "string16", "type": "string"},
+        {"name": "string17", "type": "string"},
+        {"name": "string18", "type": "string"},
+        {"name": "string19", "type": "string"},
+        {"name": "string20", "type": "string"}
+    ]
+}

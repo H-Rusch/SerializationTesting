@@ -1,0 +1,17 @@
+{
+    "namespace": "generated.data1.avro",
+    "type": "record",
+    "name": "Data1Avro",
+    "fields" : [
+        {"name": "string1", "type": "string"},
+        {"name": "string2", "type": "string"},
+        {"name": "number1", "type": "int"},
+        {"name": "number2", "type": "int"},
+        {"name": "number3", "type": "int"},
+        {"name": "number4", "type": "int"},
+        {"name": "number5", "type": "double"},
+        {"name": "number6", "type": "double"},
+        {"name": "number7", "type": "double"},
+        {"name": "number8", "type": "double"}
+    ]
+}
