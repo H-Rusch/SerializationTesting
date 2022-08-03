@@ -20,14 +20,14 @@ public class SerializationComparison {
                 // Protocol Buffers
                 new ProtocolBuffersMeasurement().measure(i);
 
-                // Avro
-                new AvroMeasurement().measure(i);
-
                 // Thrift - normal encoding
                 new ThriftMeasurement().measure(i);
 
                 // Thrift - compact encoding
                 new ThriftCompactMeasurement().measure(i);
+
+                // Avro
+                new AvroMeasurement().measure(i);
 
                 // FlatBuffers
                 new FlatBuffersMeasurement().measure(i);

@@ -12,11 +12,11 @@ message Data {
   int32 number3 = 3;
   int32 number4 = 4;
   int32 number5 = 5;
-  int32 number6 = 6;
-  int32 number7 = 7;
-  int32 number8 = 8;
-  int32 number9 = 9;
-  int32 number10 = 10;
+  sint32 number6 = 6;
+  sint32 number7 = 7;
+  sint32 number8 = 8;
+  sint32 number9 = 9;
+  sint32 number10 = 10;
   double number11 = 11;
   double number12 = 12;
   double number13 = 13;
