@@ -9,7 +9,7 @@ public class SerializationComparison {
 
         try {
             for (int i = 1; i <= 6; i++) {
-                System.out.println("\n" + "--- TEST " + i + " " + "-".repeat(30));
+                System.out.println("\n" + "--- TEST " + i + " " + "-".repeat(40));
 
                 // JSON
                 new JsonMeasurement().measure(i);
