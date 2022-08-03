@@ -23,8 +23,11 @@ public class SerializationComparison {
                 // Avro
                 new AvroMeasurement().measure(i);
 
-                // Thrift
+                // Thrift - normal encoding
                 new ThriftMeasurement().measure(i);
+
+                // Thrift - compact encoding
+                new ThriftCompactMeasurement().measure(i);
 
                 // FlatBuffers
                 new FlatBuffersMeasurement().measure(i);

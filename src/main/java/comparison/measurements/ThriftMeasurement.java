@@ -31,6 +31,12 @@ public class ThriftMeasurement extends Measurement {
         }
     }
 
+    protected ThriftMeasurement(String name, String filename, String fileExtension, TSerializer serializer, TDeserializer deserializer) {
+        super(name, filename, fileExtension);
+        this.serializer = serializer;
+        this.deserializer = deserializer;
+    }
+
     @Override
     public Object buildObject1() {
         Map<String, Object> dataItems = DataHelper.getItemMap1();
