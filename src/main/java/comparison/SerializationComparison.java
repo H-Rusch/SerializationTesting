@@ -29,11 +29,11 @@ public class SerializationComparison {
                 // Avro
                 new AvroMeasurement().measure(i);
 
-                // FlatBuffers
-                new FlatBuffersMeasurement().measure(i);
-
                 // Cap'n Proto
                 new CapnProtoMeasurement().measure(i);
+
+                // FlatBuffers
+                new FlatBuffersMeasurement().measure(i);
             }
 
         } catch (Exception e) {

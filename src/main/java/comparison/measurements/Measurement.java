@@ -8,7 +8,7 @@ public abstract class Measurement {
     private final String filename;
     private final String fileExtension;
 
-    private final long limit = 10000;
+    private final long limit = 100000;
     // divisor to get microseconds
     private final double divisor = 1000000;
 
