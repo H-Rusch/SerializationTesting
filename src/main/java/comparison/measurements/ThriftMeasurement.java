@@ -117,7 +117,7 @@ public class ThriftMeasurement extends Measurement {
 
     @Override
     public Object buildObject3() {
-        var dataItems = DataHelper.getItemMap3();
+        Map<String, Object> dataItems = DataHelper.getItemMap3();
         return new Data3Thrift()
                 .setNumber1((Integer) dataItems.get("number1"))
                 .setNumber2((Integer) dataItems.get("number2"))
@@ -165,7 +165,7 @@ public class ThriftMeasurement extends Measurement {
 
     @Override
     public Object buildObject4() {
-        var dataItems = DataHelper.getItemMap4();
+        Map<String, Object> dataItems = DataHelper.getItemMap4();
 
         return new Data4Thrift()
                 .setString1((String) dataItems.get("string1"))
@@ -214,7 +214,7 @@ public class ThriftMeasurement extends Measurement {
 
     @Override
     public Object buildObject5() {
-        var dataItems = DataHelper.getItemMap5();
+        Map<String, Object> dataItems = DataHelper.getItemMap5();
 
         return new Data4Thrift()
                 .setString1((String) dataItems.get("string1"))
@@ -263,7 +263,7 @@ public class ThriftMeasurement extends Measurement {
 
     @Override
     public Object buildObject6() {
-        var dataItems = DataHelper.getItemMap6();
+        Map<String, Object> dataItems = DataHelper.getItemMap6();
 
         return new Data6Thrift()
                 .setString1((String) dataItems.get("string1"))

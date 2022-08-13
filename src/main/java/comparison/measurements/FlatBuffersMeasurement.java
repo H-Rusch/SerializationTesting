@@ -10,6 +10,7 @@ import generated.data6.flatbuffers.Data6Flat;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.Map;
 
 public class FlatBuffersMeasurement extends Measurement {
 
@@ -27,7 +28,7 @@ public class FlatBuffersMeasurement extends Measurement {
 
     @Override
     public byte[] serializeObject1(Object object) throws IOException {
-        var dataItems = DataHelper.getItemMap1();
+        Map<String, Object> dataItems = DataHelper.getItemMap1();
 
         builder.clear();
 
@@ -66,7 +67,7 @@ public class FlatBuffersMeasurement extends Measurement {
 
     @Override
     public byte[] serializeObject2(Object object) throws IOException {
-        var dataItems = DataHelper.getItemMap2();
+        Map<String, Object> dataItems = DataHelper.getItemMap2();
 
         builder.clear();
 
@@ -111,7 +112,7 @@ public class FlatBuffersMeasurement extends Measurement {
 
     @Override
     public byte[] serializeObject3(Object object) throws IOException {
-        var dataItems = DataHelper.getItemMap3();
+        Map<String, Object> dataItems = DataHelper.getItemMap3();
 
         builder.clear();
 
@@ -157,7 +158,7 @@ public class FlatBuffersMeasurement extends Measurement {
 
     @Override
     public byte[] serializeObject4(Object object) throws IOException {
-        var dataItems = DataHelper.getItemMap4();
+        Map<String, Object> dataItems = DataHelper.getItemMap4();
 
         builder.clear();
 
@@ -224,7 +225,7 @@ public class FlatBuffersMeasurement extends Measurement {
 
     @Override
     public byte[] serializeObject5(Object object) throws IOException {
-        var dataItems = DataHelper.getItemMap5();
+        Map<String, Object> dataItems = DataHelper.getItemMap5();
 
         builder.clear();
 
@@ -291,7 +292,7 @@ public class FlatBuffersMeasurement extends Measurement {
 
     @Override
     public byte[] serializeObject6(Object object) throws IOException {
-        var dataItems = DataHelper.getItemMap6();
+        Map<String, Object> dataItems = DataHelper.getItemMap6();
 
         builder.clear();
 
