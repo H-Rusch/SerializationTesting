@@ -1,6 +1,8 @@
 package generated.data1.json;
 
-public class DataJson1 {
+import java.io.Serializable;
+
+public class DataJson1 implements Serializable {
 
     public String string1;
     public String string2;

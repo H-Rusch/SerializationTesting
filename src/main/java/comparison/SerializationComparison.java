@@ -36,6 +36,9 @@ public class SerializationComparison {
 
             // FlatBuffers
             new FlatBuffersMeasurement().measure(i);
+
+            // Java Object Serialization
+            new JavaMeasurement().measure(i);
         } catch (Exception e) {
             e.printStackTrace();
         }
