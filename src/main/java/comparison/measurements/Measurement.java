@@ -61,51 +61,39 @@ public abstract class Measurement {
     }
 
     public final Object buildObject(int number) {
-        Object obj;
-
-        switch (number) {
-            case 1 -> obj = buildObject1();
-            case 2 -> obj = buildObject2();
-            case 3 -> obj = buildObject3();
-            case 4 -> obj = buildObject4();
-            case 5 -> obj = buildObject5();
-            case 6 -> obj = buildObject6();
-            default -> obj = null;
-        }
-
-        return obj;
+        return switch (number) {
+            case 1 -> buildObject1();
+            case 2 -> buildObject2();
+            case 3 -> buildObject3();
+            case 4 -> buildObject4();
+            case 5 -> buildObject5();
+            case 6 -> buildObject6();
+            default -> null;
+        };
     }
 
     public final byte[] serializeObject(int number, Object object) throws IOException {
-        byte[] bytes;
-
-        switch (number) {
-            case 1 -> bytes = serializeObject1(object);
-            case 2 -> bytes = serializeObject2(object);
-            case 3 -> bytes = serializeObject3(object);
-            case 4 -> bytes = serializeObject4(object);
-            case 5 -> bytes = serializeObject5(object);
-            case 6 -> bytes = serializeObject6(object);
-            default -> bytes = null;
-        }
-
-        return bytes;
+        return switch (number) {
+            case 1 -> serializeObject1(object);
+            case 2 -> serializeObject2(object);
+            case 3 -> serializeObject3(object);
+            case 4 -> serializeObject4(object);
+            case 5 -> serializeObject5(object);
+            case 6 -> serializeObject6(object);
+            default -> null;
+        };
     }
 
     public final Object deserializeObject(int number, byte[] bytes) throws IOException {
-        Object obj;
-
-        switch (number) {
-            case 1 -> obj = deserializeObject1(bytes);
-            case 2 -> obj = deserializeObject2(bytes);
-            case 3 -> obj = deserializeObject3(bytes);
-            case 4 -> obj = deserializeObject4(bytes);
-            case 5 -> obj = deserializeObject5(bytes);
-            case 6 -> obj = deserializeObject6(bytes);
-            default -> obj = null;
-        }
-
-        return obj;
+        return switch (number) {
+            case 1 -> deserializeObject1(bytes);
+            case 2 -> deserializeObject2(bytes);
+            case 3 -> deserializeObject3(bytes);
+            case 4 -> deserializeObject4(bytes);
+            case 5 -> deserializeObject5(bytes);
+            case 6 -> deserializeObject6(bytes);
+            default -> null;
+        };
     }
 
     private void printInfo(int number, long measurementSerialize, long measurementDeserialize) {

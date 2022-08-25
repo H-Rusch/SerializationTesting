@@ -1,7 +1,5 @@
 package comparison.measurements;
 
-import generated.data1.json.DataJson1;
-
 import java.io.*;
 
 public class JavaMeasurement extends JsonMeasurement {
