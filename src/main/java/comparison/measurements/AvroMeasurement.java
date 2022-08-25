@@ -482,4 +482,11 @@ public class AvroMeasurement extends Measurement {
 
         return datumReaderData6.read(null, decoder);
     }
+
+    public static void main(String[] args) throws Exception {
+        int i = Integer.parseInt(args[0]);
+        DataHelper.initAll();
+
+        new AvroMeasurement().measure(i);
+    }
 }

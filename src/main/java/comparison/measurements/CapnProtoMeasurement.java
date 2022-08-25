@@ -462,4 +462,11 @@ public class CapnProtoMeasurement extends Measurement {
 
         return messageReader.getRoot(DataCapnp6.Data.factory);
     }
+
+    public static void main(String[] args) throws Exception {
+        int i = Integer.parseInt(args[0]);
+        DataHelper.initAll();
+
+        new CapnProtoMeasurement().measure(i);
+    }
 }

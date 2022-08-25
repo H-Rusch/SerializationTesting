@@ -488,4 +488,11 @@ public class ThriftMeasurement extends Measurement {
         }
         return obj;
     }
+
+    public static void main(String[] args) throws Exception {
+        int i = Integer.parseInt(args[0]);
+        DataHelper.initAll();
+
+        new ThriftMeasurement().measure(i);
+    }
 }

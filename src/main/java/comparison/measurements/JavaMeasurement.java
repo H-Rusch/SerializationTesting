@@ -1,5 +1,7 @@
 package comparison.measurements;
 
+import comparison.DataHelper;
+
 import java.io.*;
 
 public class JavaMeasurement extends JsonMeasurement {
@@ -90,5 +92,12 @@ public class JavaMeasurement extends JsonMeasurement {
     @Override
     public Object deserializeObject6(byte[] bytes) throws IOException {
         return deserializeObject(bytes);
+    }
+
+    public static void main(String[] args) throws IOException {
+        int i = Integer.parseInt(args[0]);
+        DataHelper.initAll();
+
+        new JavaMeasurement().measure(i);
     }
 }

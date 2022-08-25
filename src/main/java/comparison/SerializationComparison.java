@@ -1,46 +1,47 @@
 package comparison;
 
-import comparison.measurements.*;
+import java.util.List;
 
 public class SerializationComparison {
 
-    public static void main(String[] args) {
-        DataHelper.initAll();
+    private static final String JAVA = "java";
+    private static final String CP = "-cp";
+    private static final String CLASS_PATH = System.getProperty("java.class.path");
+    private static final String PATH = "comparison.measurements.";
 
-        // set the variable manually to run the test for the specified case.
-        // valid values contain [1, 6]
-        int i = 1;
-        try {
+    private static final List<String> measurements = List.of("JsonMeasurement",
+            "BsonMeasurement",
+            "ProtocolBuffersMeasurement",
+            "ThriftMeasurement",
+            "ThriftCompactMeasurement",
+            "AvroMeasurement",
+            "CapnProtoMeasurement",
+            "FlatBuffersMeasurement",
+            "JavaMeasurement"
+    );
+
+    public static void main(String[] args) {
+        ProcessBuilder pb = new ProcessBuilder();
+        pb.inheritIO();
+
+        for (int i = 1; i <= 6; i++) {
             System.out.println("\n" + "--- TEST " + i + " " + "-".repeat(40));
 
-            // JSON
-            new JsonMeasurement().measure(i);
 
-            // BSON
-            new BsonMeasurement().measure(i);
+            for (String measurement : measurements) {
+                // start another process so there is no caching between cases
+                try {
+                    pb.command(JAVA,
+                            CP, CLASS_PATH,
+                            PATH + measurement,
+                            String.valueOf(i)
+                    );
+                    pb.start().waitFor();
 
-            // Protocol Buffers
-            new ProtocolBuffersMeasurement().measure(i);
-
-            // Thrift - normal encoding
-            new ThriftMeasurement().measure(i);
-
-            // Thrift - compact encoding
-            new ThriftCompactMeasurement().measure(i);
-
-            // Avro
-            new AvroMeasurement().measure(i);
-
-            // Cap'n Proto
-            new CapnProtoMeasurement().measure(i);
-
-            // FlatBuffers
-            new FlatBuffersMeasurement().measure(i);
-
-            // Java Object Serialization
-            new JavaMeasurement().measure(i);
-        } catch (Exception e) {
-            e.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

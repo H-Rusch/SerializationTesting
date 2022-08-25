@@ -540,4 +540,11 @@ public class FlatBuffersMeasurement extends Measurement {
 
         return Data6Flat.getRootAsData6Flat(buffer);
     }
+
+    public static void main(String[] args) throws Exception {
+        int i = Integer.parseInt(args[0]);
+        DataHelper.initAll();
+
+        new FlatBuffersMeasurement().measure(i);
+    }
 }

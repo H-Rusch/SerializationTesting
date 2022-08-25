@@ -8,6 +8,7 @@ import generated.data4_5.protobuf.DataProtos4;
 import generated.data6.protobuf.DataProtos6;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Map;
 
 public class ProtocolBuffersMeasurement extends Measurement {
@@ -406,5 +407,12 @@ public class ProtocolBuffersMeasurement extends Measurement {
     @Override
     public Object deserializeObject6(byte[] bytes) throws IOException {
         return DataProtos6.Data.parseFrom(bytes);
+    }
+
+    public static void main(String[] args) throws Exception {
+        int i = Integer.parseInt(args[0]);
+        DataHelper.initAll();
+
+        new ProtocolBuffersMeasurement().measure(i);
     }
 }

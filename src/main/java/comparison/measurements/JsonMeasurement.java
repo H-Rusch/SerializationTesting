@@ -406,4 +406,11 @@ public class JsonMeasurement extends Measurement {
     public Object deserializeObject6(byte[] bytes) throws IOException {
         return mapper.readValue(bytes, DataJson6.class);
     }
+
+    public static void main(String[] args) throws Exception {
+        int i = Integer.parseInt(args[0]);
+        DataHelper.initAll();
+
+        new JsonMeasurement().measure(i);
+    }
 }
